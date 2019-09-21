@@ -1,4 +1,7 @@
 # Audio-Diary
 Audio Diary is a software that enables users to keep daily voice notes/audio recordings of daily observations or events.
+It is a diary but this time allows users to record audio and saves them the stress of writing. 
 
-Audio Diary was built to help reduce the stress of writing down personal experiences or observations. 
+I built Audio Diary for my project work at NIIT (National Institute Of Technology), Nigeria. 
+
+Please feel free to make any changes or ask any questions about the codes or software itself. Thanks!. 
