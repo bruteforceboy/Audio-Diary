@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="298.0" prefWidth="549.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecordingDetailsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="28.0" layoutY="21.0" minWidth="-Infinity" prefHeight="256.0" prefWidth="494.0" style="-fx-background-color: white;" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@/css/stylesheet.css" />
+          </stylesheets>
+         <children>
+            <GridPane layoutX="27.0" layoutY="32.0" prefHeight="183.0" prefWidth="444.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="172.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="305.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Recording Title">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Comments" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Mood" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="titleTextField" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="moodComboBox" prefHeight="25.0" prefWidth="353.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextArea fx:id="commentTextField" prefHeight="58.0" prefWidth="290.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="titleInvalidation" prefHeight="17.0" prefWidth="294.0" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="addButton" layoutX="338.0" layoutY="212.0" mnemonicParsing="false" onAction="#addRecord" prefHeight="32.0" prefWidth="131.0" style="-fx-text-fill: white;" text="    ADD RECORD">
+               <graphic>
+                  <FontAwesomeIconView fill="#fcf6f6" glyphName="PLUS" size="2em" />
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

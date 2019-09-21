@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1219.0" style="-fx-background-color: lightblue;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AudioDiaryMainController">
+    <stylesheets>
+        <URL value="@/css/stylesheet.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="262.0" layoutY="105.0" prefHeight="411.0" prefWidth="955.0">
+         <content>
+            <TableView fx:id="tableView" prefHeight="408.0" prefWidth="949.0">
+               <columns>
+                  <TableColumn fx:id="titleColumn" prefWidth="425.0" text="TITLE" />
+                  <TableColumn fx:id="dateColumn" prefWidth="400.0" text="DATE" />
+                  <TableColumn fx:id="moodColumn" prefWidth="122.0" text="MOOD" />
+               </columns>
+            </TableView>
+         </content></ScrollPane>
+      <ComboBox fx:id="dayComboBox" layoutX="840.0" layoutY="10.0" prefHeight="31.0" prefWidth="55.0" />
+      <ComboBox fx:id="monthComboBox" layoutX="903.0" layoutY="10.0" prefHeight="31.0" prefWidth="152.0" />
+      <ComboBox fx:id="yearComboBox" layoutX="1064.0" layoutY="10.0" prefHeight="32.0" prefWidth="96.0" />
+      <Button layoutX="1175.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterResults" prefHeight="32.0" prefWidth="41.0" text="Go" />
+      <Button fx:id="addRecord" graphicTextGap="25.0" layoutX="262.0" layoutY="11.0" mnemonicParsing="false" onAction="#addNewRecording" prefHeight="32.0" prefWidth="256.0" text="ADD NEW RECORDING">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="2em" wrappingWidth="22.428571701049805" />
+         </graphic></Button>
+   <TextField fx:id="titleSearchField" layoutX="261.0" layoutY="54.0" prefHeight="44.0" prefWidth="414.0" promptText="search titles ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="moodSearchField" layoutX="1009.0" layoutY="54.0" prefHeight="45.0" prefWidth="206.0" promptText="search mood">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <AnchorPane layoutX="-3.0" layoutY="-1.0" prefHeight="605.0" prefWidth="247.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="homeButton" alignment="CENTER" layoutX="36.0" layoutY="283.0" mnemonicParsing="false" onAction="#goBackHome" prefHeight="79.0" prefWidth="191.0" text=" HOME" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" onMouseClicked="#goBackHome" size="4em" />
+               </graphic>
+            </Button>
+            <Label layoutX="38.0" layoutY="160.0" prefHeight="73.0" prefWidth="191.0" text="Audio Diary">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="28.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="helpButton" alignment="CENTER" graphicTextGap="14.0" layoutX="36.0" layoutY="408.0" mnemonicParsing="false" onAction="#viewHelp" prefHeight="79.0" prefWidth="191.0" text=" HELP">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="QUESTION" size="4em" />
+               </graphic>
+            </Button>
+            <FontAwesomeIconView glyphName="USER" layoutX="9.0" layoutY="22.0" size="2EM" />
+            <Label fx:id="currentUserLabel" layoutX="31.0" layoutY="2.0" prefHeight="22.0" prefWidth="124.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView glyphName="FILTER" layoutX="811.0" layoutY="33.0" size="2EM" />
+      <Button layoutX="263.0" layoutY="556.0" mnemonicParsing="false" onAction="#pausePlayer" prefHeight="46.0" prefWidth="93.0">
+         <graphic>
+            <FontAwesomeIconView fx:id="pauseGlyph" glyphName="PAUSE" size="3em" style="-fx-fill: white;" />
+         </graphic></Button>
+      <Slider fx:id="timeSlider" layoutX="445.0" layoutY="556.0" prefHeight="28.0" prefWidth="767.0" />
+      <TextField fx:id="commentsSearchField" layoutX="694.0" layoutY="54.0" prefHeight="45.0" prefWidth="301.0" promptText="search comments">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER_RIGHT" graphicTextGap="7.0" layoutX="628.0" layoutY="10.0" mnemonicParsing="false" onAction="#resetAudioDiary" prefHeight="31.0" prefWidth="70.0" text="RESET">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="1EM" />
+         </graphic></Button>
+      <Button layoutX="361.0" layoutY="556.0" mnemonicParsing="false" onAction="#stopPlayer" prefHeight="46.0" prefWidth="72.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="STOP" size="3em" style="-fx-fill: white;" />
+         </graphic></Button>
+      <Slider fx:id="volumeSlider" layoutX="1046.0" layoutY="582.0" prefHeight="17.0" prefWidth="166.0" value="100.0" />
+      <Button alignment="CENTER_RIGHT" layoutX="263.0" layoutY="516.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="31.0" prefWidth="93.0" text="DELETE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#eeebeb" glyphName="TRASH" size="2EM" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

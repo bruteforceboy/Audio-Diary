@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="108.0" prefWidth="524.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AudioPlayerController">
+    <stylesheets>
+        <URL value="@/css/stylesheet.css" />
+    </stylesheets>
+    <children>
+      <Slider fx:id="timeSlider" layoutY="28.0" prefHeight="14.0" prefWidth="524.0" />
+      <HBox alignment="CENTER" layoutX="4.0" layoutY="43.0" prefHeight="34.0" prefWidth="346.0" spacing="20.0">
+         <children>
+            <Button fx:id="playButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLAY" style="-fx-fill: white;" />
+               </graphic>
+            </Button>
+            <Button fx:id="pauseButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PAUSE" style="-fx-fill: white;" />
+               </graphic>
+            </Button>
+            <Button fx:id="stopButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="STOP" style="-fx-fill: white;" />
+               </graphic>
+            </Button>
+            <Button fx:id="backButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_LEFT" size="1.5em" style="-fx-fill: white;" />
+               </graphic>
+            </Button>
+            <Button fx:id="forwardButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_RIGHT" size="1.5em" style="-fx-fill: white;" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Slider fx:id="volumeSlider" layoutX="396.0" layoutY="53.0" prefHeight="14.0" prefWidth="128.0" value="100.0" />
+      <Label fx:id="directoryLabel" layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="299.0" style="-fx-text-fill: black;" />
+      <Button fx:id="nextButton" layoutX="379.0" layoutY="78.0" mnemonicParsing="false" onAction="#goToNextScene" prefHeight="25.0" prefWidth="140.0" text="Next" />
+   </children>
+</AnchorPane>

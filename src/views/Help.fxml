@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="627.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelpController">
+   <children>
+      <TitledPane layoutX="2.0" layoutY="50.0" prefHeight="74.0" prefWidth="628.0" text="What is Audio Diary?">
+         <content>
+            <TextArea prefHeight="79.0" prefWidth="626.0" text="Audio Diary is a software that enables users to keep daily voice notes/audio recordings of daily observations or events." wrapText="true" />
+         </content>
+      </TitledPane>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="30.0" prefWidth="627.0" text="Frequently Asked Questions (FAQ's)" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <TitledPane layoutX="3.0" layoutY="138.0" prefHeight="67.0" prefWidth="628.0" text="What is the purpose of Audio Diary?">
+         <content>
+            <TextArea prefHeight="200.0" prefWidth="200.0" text="Audio Diary was built to help reduce the stress of writing down personal experiences or observations. " wrapText="true" />
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="3.0" layoutY="221.0" prefHeight="74.0" prefWidth="628.0" text="How are new Recordings added?">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea layoutX="-2.0" prefHeight="48.0" prefWidth="627.0" text="Clicking on the button ADD NEW RECORDING on the top row with the plus(+) icon opens up a new window where you can start recording, stop recording, preview recording, add a few details and add to your diary." wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="3.0" layoutY="313.0" prefHeight="101.0" prefWidth="628.0" text="How do I search for a Record?">
+        <content>
+          <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="77.0" prefWidth="626.0">
+               <children>
+                  <TextArea layoutY="-6.0" prefHeight="81.0" prefWidth="627.0" text="To search for a recording you can sarch by comments/title/mood or you can filter by the day, month and year. To search by comments you can use the text field labeled with comments same goes for the title and mood while to filter by day/month/year at the top row you should see a filter cup icon beside it you can select the day/month/year." wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane layoutX="3.0" layoutY="425.0" prefHeight="67.0" prefWidth="627.0" text="Contact Information">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <FontAwesomeIconView glyphName="PHONE" layoutX="34.0" layoutY="18.0" />
+                  <FontAwesomeIconView glyphName="ENVELOPE" layoutX="33.0" layoutY="45.0" />
+                  <Label layoutX="59.0" layoutY="4.0" prefHeight="19.0" prefWidth="190.0" text="+2348126076392">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="62.0" layoutY="31.0" prefHeight="19.0" prefWidth="210.0" text="ogbonnachibuoyim12@gmail.com">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

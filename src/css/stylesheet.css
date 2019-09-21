@@ -1,0 +1,53 @@
+.glyphicon
+{
+    font-size: 100px;
+}
+.combo-box-base
+{
+    -fx-text-fill: lightblue;
+    -fx-background-color: white;
+}
+.combo-box-base:hover
+{
+    -fx-cursor: hand;
+}
+.button
+{
+    -fx-text-fill: white;
+    -fx-background-color: steelblue;
+}
+.button:hover
+{
+    -fx-cursor: hand;
+    -fx-background-color: blue;
+}
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+} 
+
+.table-view .column-header-background{
+    -fx-background-color: steelblue;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent; 
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:17px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color:lightblue;
+}
